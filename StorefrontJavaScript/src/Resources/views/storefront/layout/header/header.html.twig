@@ -1,0 +1,25 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+
+{% block layout_header_actions_cart %}
+    {{ parent() }}
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButton = document.querySelector('.btn-buy');
+            console.info("test12")
+
+            addToCartButton.addEventListener('click', function() {
+                addToCartButton.style.backgroundColor = '{{ theme_config('shoping-cart-color-setting') }}';
+
+                addToCartButton.innerHTML = '{{ 'checkout.cartAddedTitle'|trans|striptags }}';
+                
+                setTimeout(function() {
+                    addToCartButton.style.backgroundColor = '';
+                    addToCartButton.innerHTML = "{{ 'checkout.cartTitle'|trans|striptags }}";
+                },10000);
+            });
+        });
+    </script>
+{% endblock %}

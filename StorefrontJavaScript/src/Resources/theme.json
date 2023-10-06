@@ -1,0 +1,51 @@
+{
+  "name": "StorefrontJavaScript",
+  "author": "Shopware AG",
+  "views": [
+    "@Storefront",
+    "@Plugins",
+    "@StorefrontJavaScript"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/storefront-java-script.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "app/storefront/src/assets"
+  ],
+  "config": {
+    "blocks": {
+      "settings": {
+        "en-GB": "Shoping Cart - background color",
+        "de-DE": "Warenkorb-Hintergrundfarbe"
+      }
+    },
+    "sections": {
+      "shopingCartColor": {
+        "label": {
+          "en-GB": "Shopping cart color settings",
+          "de-DE": "Warenkorb Farbeinstellung"
+        }
+      }
+    },
+    "fields": {
+      "shoping-cart-color-setting": {
+        "label": {
+          "en-GB": "Added to cart - background color",
+          "de-DE": "Wird in den Warenkorb gelegt - Hintergrundfarbe"
+        },
+        "type": "color",
+        "editable": true,
+        "block": "settings",
+        "section": "shopingCartColor",
+        "value": "#FFFF00"
+      }
+    }
+  }
+}

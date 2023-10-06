@@ -1,0 +1,18 @@
+{
+  "name": "swag/storfront1-template",
+  "description": "My Template Theme 1",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "StorefrontJavaScript\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "StorefrontJavaScript\\StorefrontJavaScript",
+    "label": {
+      "de-DE": "Theme StorefrontJavaScript plugin",
+      "en-GB": "Theme StorefrontJavaScript plugin"
+    }
+  }
+}
