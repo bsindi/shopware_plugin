@@ -8,7 +8,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const addToCartButton = document.querySelector('.btn-buy');
-            console.info("test12")
 
             addToCartButton.addEventListener('click', function() {
                 addToCartButton.style.backgroundColor = '{{ theme_config('shoping-cart-color-setting') }}';
@@ -18,7 +17,7 @@
                 setTimeout(function() {
                     addToCartButton.style.backgroundColor = '';
                     addToCartButton.innerHTML = "{{ 'checkout.cartTitle'|trans|striptags }}";
-                },10000);
+                },1000);
             });
         });
     </script>
